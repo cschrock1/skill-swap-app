@@ -80,7 +80,7 @@ export default {
 
     const fetchListings = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/listings')
+        const res = await axios.get('https://skill-swap-app-3is6.onrender.com/api/listings')
         listings.value = res.data
       } catch (err) {
         console.error('Failed to fetch listings', err)
@@ -100,7 +100,7 @@ export default {
       message.value = ''
       try {
         const token = localStorage.getItem('token')
-        await axios.post('http://localhost:5000/api/listings', {
+        await axios.post('https://skill-swap-app-3is6.onrender.com/api/listings', {
           title: title.value,
           category: category.value,
           listingType: listingType.value,

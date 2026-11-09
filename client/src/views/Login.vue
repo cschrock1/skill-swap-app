@@ -22,7 +22,7 @@ export default {
     const router = useRouter()
     const handleLogin = async () => {
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/login', { email: email.value, password: password.value })
+        const res = await axios.post('https://skill-swap-app-3is6.onrender.com/api/auth/login', { email: email.value, password: password.value })
         localStorage.setItem('token', res.data.token)
         localStorage.setItem('user', JSON.stringify(res.data))
         router.push('/dashboard')
